@@ -8,6 +8,7 @@ public class quiz1 {
 		// TODO Auto-generated method stub
 		Scanner scann = new Scanner(System.in);
 		int inputInt = 0;
+		int saveInt = 0; 		//입력된 값을 보존하기 위한 복사 변수
 		int firstNumber = 0;
 		int secondNumber = 0;
 		int thirdNumber = 0;
@@ -15,14 +16,14 @@ public class quiz1 {
 		
 		System.out.print("4자리 정수 입력 : ");
 		inputInt = scann.nextInt();
-		
-		firstNumber = inputInt % 10;
-		inputInt = inputInt / 10;
-		secondNumber = inputInt % 10;
-		inputInt = inputInt / 10;
-		thirdNumber = inputInt % 10;
-		inputInt = inputInt / 10;
-		fourthNumber = inputInt;
+		saveInt = inputInt;
+		firstNumber = saveInt % 10;
+		saveInt = saveInt / 10;
+		secondNumber = saveInt % 10;
+		saveInt = saveInt / 10;
+		thirdNumber = saveInt % 10;
+		saveInt = saveInt / 10;
+		fourthNumber = saveInt;
 		
 		
 		System.out.println("4번째 자리 수 : " + fourthNumber);
