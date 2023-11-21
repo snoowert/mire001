@@ -25,6 +25,7 @@ public class quiz1 {
 		thirdNumber = saveInt % 10;
 		saveInt = saveInt / 10;
 		fourthNumber = saveInt;
+		saveInt = saveInt / 10;
 		
 		
 		System.out.println("4번째 자리 수 : " + fourthNumber);
