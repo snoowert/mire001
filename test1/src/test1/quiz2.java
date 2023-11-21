@@ -30,9 +30,26 @@ public class quiz2 {
 			User = "가위";
 		else if(userChoice == 2)
 			User = "바위";
-		else
+		else {
 			User = "보";
+			userChoice = 3;
+		}
 		
+		if(computerChoice == userChoice) {
+			result = "비겼습니다.";
+		}
+		else {
+			userChoice = userChoice + 1;
+			if(userChoice > 3) {
+				userChoice = userChoice - 3;
+			}
+			if(computerChoice == userChoice) {
+				result = "졌습니다.";
+			}
+			else {
+				result = "이겼습니다.";
+			}
+		}
 		
 		
 		
