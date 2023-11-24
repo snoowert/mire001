@@ -38,6 +38,7 @@ public class quiz3 {
 			System.out.println();
 		}
 		if (change > 0) {
+			System.out.println();
 			System.out.println("ÀÜµ· : " + change + "¿ø");
 		}
 	}
