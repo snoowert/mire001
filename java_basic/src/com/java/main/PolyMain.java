@@ -1,24 +1,15 @@
 package com.java.main;
 
-import java.util.Scanner;
-
-import com.java.dto.CircleVO;
-import com.java.dto.RectangularVO;
-import com.java.dto.TriangleVO;
+import com.java.dto.Shape;
+import com.java.solution.SurfaceSolution;
 
 public class PolyMain {
-
-	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		SurfaceSolution main = new SurfaceSolution();
-		do {
-			main.input();
-			main.process();
-			main.output();
-		} while (true);
+		main.start();
+
 	}
 
-	
 }

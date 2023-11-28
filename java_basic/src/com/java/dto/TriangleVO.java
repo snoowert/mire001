@@ -1,12 +1,14 @@
 package com.java.dto;
 
-public class TriangleVO {
+import java.util.Scanner;
+
+public class TriangleVO extends Shape {
 	// 명시적 초기화
 	public int height;
 	public int baseLine;
 
 	{
-		int temp = (int)( Math.random() * 11);
+		int temp = (int) (Math.random() * 11);
 		height = baseLine = (temp % 2 == 0) ? 0 : 1;
 	}
 
@@ -18,9 +20,44 @@ public class TriangleVO {
 		this.height = height;
 		this.baseLine = baseLine;
 	}
-	
+
+	@Override
 	public int surface() {
-		return baseLine * height / 2;
+		return (int) (baseLine * height / 2);
+	}
+
+	@Override
+	public void inputData() {
+		// TODO Auto-generated method stub
+		Scanner scann = new Scanner(System.in);
+		System.out.print("밑변 : ");
+		setBase(scann.nextInt());
+		scann.nextLine();
+		System.out.print("높이 : ");
+		setHeight(scann.nextInt());
+		scann.nextLine();
+	}
+
+	@Override
+	public String outputMasage() {
+		// TODO Auto-generated method stub
+		return "삼각형의 넓이 : " + surface();
+	}
+
+	public void setBase(int baseLine) {
+		this.baseLine = baseLine;
+	}
+
+	public int getBase() {
+		return baseLine;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+	public int getHeight() {
+		return height;
 	}
 //	//블럭 초기화
 //	{
