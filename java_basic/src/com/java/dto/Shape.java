@@ -6,7 +6,5 @@ public abstract class Shape {
 
 	public abstract int surface();
 
-	public abstract void inputData();
-
-	public abstract String outputMasage();
+	
 }

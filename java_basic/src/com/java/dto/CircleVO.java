@@ -2,7 +2,10 @@ package com.java.dto;
 
 import java.util.Scanner;
 
-public class CircleVO extends Shape {
+import com.java.ifc.inputable;
+import com.java.ifc.outputable;
+
+public class CircleVO extends Shape implements inputable, outputable{
 
 	public int radius;
 
@@ -21,7 +24,7 @@ public class CircleVO extends Shape {
 	}
 
 	@Override
-	public void inputData() {
+	public void input() {
 		Scanner scann = new Scanner(System.in);
 		System.out.print("반지름 : ");
 		setRadius(scann.nextInt());
@@ -29,7 +32,7 @@ public class CircleVO extends Shape {
 	}
 
 	@Override
-	public String outputMasage() {
+	public String output() {
 		return "원의 넓이 : " + surface();
 	}
 

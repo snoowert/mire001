@@ -2,7 +2,10 @@ package com.java.dto;
 
 import java.util.Scanner;
 
-public class RectangularVO extends Shape {
+import com.java.ifc.inputable;
+import com.java.ifc.outputable;
+
+public class RectangularVO extends Shape implements inputable, outputable{
 	public int width;
 	public int height;
 
@@ -22,7 +25,7 @@ public class RectangularVO extends Shape {
 	}
 
 	@Override
-	public void inputData() {
+	public void input() {
 		// TODO Auto-generated method stub
 		Scanner scann = new Scanner(System.in);
 		System.out.print("가로 : ");
@@ -34,7 +37,7 @@ public class RectangularVO extends Shape {
 	}
 
 	@Override
-	public String outputMasage() {
+	public String output() {
 		// TODO Auto-generated method stub
 		return "사각형의 넓이 : " + surface();
 	}

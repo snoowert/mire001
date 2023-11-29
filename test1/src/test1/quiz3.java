@@ -22,7 +22,7 @@ public class quiz3 {
 		for (int i = 0; i < lottoCnt; i++) {
 			for (int j = 0; j < lottoNum[i].length; j++) {
 				lottoNum[i][j] = (int) (Math.random() * 45 + 1);
-				for (int k = 0; k < j; k++) {	//중복 검사
+				for (int k = 0; k < j; k++) { // 중복 검사
 					if (lottoNum[i][k] == lottoNum[i][j]) {
 						j--;
 						break;
