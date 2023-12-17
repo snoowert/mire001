@@ -13,7 +13,7 @@ public class Exercise_Set {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Set<ScoreVO> set = new TreeSet<ScoreVO>();
+		Set<ScoreVO> set = new TreeSet<ScoreVO>(new ScoreTotalComparator());
 		Set<ScoreVO> treeSetByComparator = new TreeSet<ScoreVO>(new ScoreDateComparator());
 
 		for (int i = 0; i < 3; i++) {
