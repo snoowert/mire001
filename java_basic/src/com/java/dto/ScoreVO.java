@@ -1,5 +1,6 @@
 package com.java.dto;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -12,8 +13,13 @@ public class ScoreVO implements Comparable<ScoreVO> {
 	private int eng;
 	private int scien;
 	private Date scoreDay;
+	private int stuNum;
 	Scanner scann = new Scanner(System.in);
 
+	public int getNum() {
+		return num;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -47,7 +53,9 @@ public class ScoreVO implements Comparable<ScoreVO> {
 	}
 
 	public void inputScore(int number) {
-		num = number;
+		System.out.print("학번 : ");
+		num = scann.nextInt();
+		scann.nextLine();
 		System.out.print("이름 : ");
 		name = scann.nextLine();
 		System.out.print("국어 : ");
@@ -67,13 +75,24 @@ public class ScoreVO implements Comparable<ScoreVO> {
 	}
 
 	public void printScore() {
+		SimpleDateFormat stdFormat = new SimpleDateFormat("yyyy.MM.dd");
+		String regDate = stdFormat.format(scoreDay);
+		String today = stdFormat.format(new Date());
+		if (regDate.equals(today)) {
+			regDate = new SimpleDateFormat("HH:mm:ss").format(this.scoreDay);
+		}
 		System.out.print(num + "\t" + name + "\t" + kor + "\t" + eng + "\t" + math + "\t" + scien + "\t");
 		System.out.print(total() + "\t" + evg());
-		System.out.println("\t" + scoreDay);
+		System.out.println("\t" + regDate);
+
 	}
 
 	@Override
 	public int compareTo(ScoreVO o) {
-		return this.name.compareTo(o.getName());
+		if (this.num == o.num) {
+			return 0;
+		} else {
+			return o.scoreDay.compareTo(this.scoreDay);
+		}
 	}
 }

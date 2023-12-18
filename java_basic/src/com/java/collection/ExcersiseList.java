@@ -10,13 +10,17 @@ public class ExcersiseList {
 		List<Integer> scoreList = new ArrayList<Integer>();
 		scoreList.add(1);
 		scoreList.add(2);
+		scoreList.add(5);
+		scoreList.add(0,3);
+		scoreList.add(4);
+		scoreList.add(9);
 //		scoreList.add('a');
 //		scoreList.add("a");
 //		scoreList.add(false);
 //		scoreList.add(1.0f);
 //		scoreList.add(1.0);
 //		scoreList.add(1l);
-		Collections.sort(scoreList, Collections.reverseOrder());
+		//Collections.sort(scoreList, Collections.reverseOrder());
 		System.out.println(scoreList);
 		System.out.println("scoreList Å©±â : " + scoreList.size());
 		for(int i = 0; i < scoreList.size(); i++) {

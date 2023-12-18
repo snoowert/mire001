@@ -13,8 +13,8 @@ public class Exercise_Set {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Set<ScoreVO> set = new TreeSet<ScoreVO>(new ScoreTotalComparator());
-		Set<ScoreVO> treeSetByComparator = new TreeSet<ScoreVO>(new ScoreDateComparator());
+		Set<ScoreVO> set = new TreeSet<ScoreVO>();
+		Set<ScoreVO> treeSetByComparator = new TreeSet<ScoreVO>(new ScoreTotalComparator());
 
 		for (int i = 0; i < 3; i++) {
 			ScoreVO sVO1 = new ScoreVO();
@@ -22,14 +22,6 @@ public class Exercise_Set {
 			set.add(sVO1);
 			treeSetByComparator.add(sVO1);
 		}
-//		set.add(1);
-//		set.add(2);
-//		set.add('a');
-//		set.add("a");
-//		set.add(false);
-//		set.add(1.0f);
-//		set.add(1.0);
-//		set.add(1l);
 
 		System.out.println("Set »çÀÌÁî : " + set.size());
 		Iterator<ScoreVO> it = set.iterator();
@@ -37,8 +29,9 @@ public class Exercise_Set {
 		while (it.hasNext()) {
 			it.next().printScore();
 		}
+
 		System.out.println("---");
-		while(its.hasNext()) {
+		while (its.hasNext()) {
 			its.next().printScore();
 		}
 	}
