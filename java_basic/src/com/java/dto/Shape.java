@@ -1,8 +1,8 @@
 package com.java.dto;
 
 public abstract class Shape {
-	// °íÁ¤°ª ÀÏÃ¼ º¯°æ ºÒ°¡
-	public final static String copyWriter = "±èÇü¹Î";
+	// ê³ ì •ê°’ ì¼ì²´ ë³€ê²½ ë¶ˆê°€
+	public final static String copyWriter = "ê¹€í˜•ë¯¼";
 
 	public abstract int surface();
 
