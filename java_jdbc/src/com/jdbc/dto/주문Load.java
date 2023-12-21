@@ -14,12 +14,13 @@ public class 주문Load {
 	private String password = "mire001";
 
 	public List<주문VO> 주문DataLoad() throws Exception {
-		List<주문VO> 주문리스트 = new ArrayList<주문VO>();
+		
 
 		Class.forName(DriverClassName);
 
 		Connection conn = DriverManager.getConnection(url, username, password);
 
+		List<주문VO> 주문리스트 = new ArrayList<주문VO>();
 		String sql = "select * from 주문";
 		Statement stmt = conn.createStatement();
 
