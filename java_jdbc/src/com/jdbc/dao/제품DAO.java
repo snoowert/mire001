@@ -47,7 +47,7 @@ public class 제품DAO implements DAO<제품VO> {
 	}
 
 	@Override
-	public 제품VO selectById() {
+	public 제품VO selectById(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -51,7 +51,7 @@ public class 주문DAO implements DAO<주문VO> {
 	}
 
 	@Override
-	public 주문VO selectById() {
+	public 주문VO selectById(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

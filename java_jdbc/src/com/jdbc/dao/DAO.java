@@ -7,7 +7,7 @@ import com.jdbc.dto.VO;
 public interface DAO<E extends VO> {
 	List<E> selectList() throws Exception;
 
-	E selectById() throws Exception;
+	E selectById(String id) throws Exception;
 
 	void insert(E e) throws Exception;
 

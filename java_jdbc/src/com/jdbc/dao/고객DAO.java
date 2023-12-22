@@ -51,7 +51,7 @@ public class 고객DAO implements DAO<고객VO> {
 	}
 
 	@Override
-	public 고객VO selectById() {
+	public 고객VO selectById(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
