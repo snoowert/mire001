@@ -1,15 +1,15 @@
 package com.java.dto;
 
 public class Car {
-	protected int wheel;
+	protected int wheel = 10;
 	protected int breakk;
 	protected int accel;
 	
 	
 	public void speedUp() {
-		System.out.println("ºÎ¸ð ½ºÇÇµå ¾÷");
+		System.out.println("ï¿½Î¸ï¿½ 2ï¿½ï¿½ï¿½Çµï¿½ ï¿½ï¿½");
 	}
 	public void speedDown() {
-		System.out.println("ºÎ¸ð ½ºÇÇµå ´Ù¿î");
+		System.out.println("ï¿½Î¸ï¿½ ï¿½3ï¿½ï¿½Çµï¿½ ï¿½Ù¿ï¿½");
 	}
 }

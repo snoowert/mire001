@@ -7,12 +7,12 @@ public class FireEngine extends Car{
 	
 	@Override
 	public void speedUp() {
-		System.out.println("ÀÚ½Ä : ½ºÇÇµå¾÷");
+		System.out.println("ï¿½Ú½ï¿½ : ï¿½7ï¿½ï¿½Çµï¿½ï¿½");
 	}
 	
 	@Override
 	public void speedDown() {
-		System.out.println("ÀÚ½Ä ½ºÇÇµå ´Ù¿î");
+		System.out.println("ï¿½Ú½ï¿½ ï¿½ï¿½ï¿½Çµ7ï¿½ ï¿½Ù¿ï¿½");
 	}
 	
 }

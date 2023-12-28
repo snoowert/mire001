@@ -11,7 +11,7 @@ public class example04 {
 		try {
 			File file = new File("example03.txt");
 			if(!file.exists()) {
-				System.out.println("ÆÄÀÏÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.");
 				return;
 			}
 			FileReader fis = new FileReader(file);
@@ -19,7 +19,7 @@ public class example04 {
 			
 ;			
 			int i = 0;
-			while((i = fis.read()) != -1) {
+			while((i = br.read()) != -1) {
 				System.out.print((char)i);
 			}
 			fis.close();
