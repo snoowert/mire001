@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
+
 <%@ include file="/WEB-INF/views/module/header.jsp" %>
 
 <div class="wrapper">
@@ -35,7 +36,7 @@
    	<section class="content">
    		<div class="card">
    			<div class="card-header with-border">
-   				<button type="button" class="btn btn-primary" onclick="OpenWindow('registForm','회원등록',700,800)" >회원등록</button>
+   				<button type="button" class="btn btn-primary" onclick="OpenWindow('registForm','회원등록',700,800);" >회원등록</button>
    				<div id="keyword" class="card-tools" style="width:550px;">
    					 <div class="input-group row">
    					 	<!-- search bar -->
@@ -82,8 +83,10 @@
 		               	</tr>
 		               	<c:if test="${not empty memberList }">
 		              	<c:forEach var="member" items="${memberList }">
-		              		<tr>
-		              			<td></td>	
+		              		<tr onclick="OpenWindow('detail?id=${member.id}','상세보기',700,800)" style="cursor:pointer;">
+		              			<td style="margin:0;padding:0;padding-top:5px;">
+		              				<span class="manPicture" data-id=${member.id } style="display:block; margin:0 auto; width=40px; height=50px;"></span>
+		              			</td>	
 		              			<td>${member.id }</td>
 		              			<td>${member.pwd }</td>
 		              			<td>${member.name }</td>
@@ -116,16 +119,16 @@
 </div>
 <!-- ./wrapper -->
 
-  
 
-
-
-
-
+<%@ include file="/WEB-INF/views/module/common_js.jsp" %>
 <!-- REQUIRED SCRIPTS -->
+<script>
+	MemberPictureThumb('<%=request.getContextPath()%>');
+</script>
+
+<%@ include file="/WEB-INF/views/module/footer.jsp" %>
 
 
 
 
-<%@ include file="/WEB-INF/views/module/common_js.jsp"%>
-<%@ include file="/WEB-INF/views/module/footer.jsp"%>
+
