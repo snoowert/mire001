@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+	<!-- repo -->
+	<bean id="pdsSavedFilePath" class="java.lang.String">
+		<constructor-arg value="${savedPath.pds}"></constructor-arg>
+	</bean>
+	<bean id="AttachDAO" class="com.attetch.spring.dao.AttachDAOImpl"
+		p:sqlSession-ref="sqlSession" />
+	<bean id="PdsDAO" class="com.attetch.spring.dao.PdsDAOImpl"
+		p:sqlSession-ref="sqlSession" />
+
+	<!-- service -->
+	<bean id="PdsService"
+		class="com.attetch.spring.service.PdsServiceImpl"
+		p:attachDAO-ref="AttachDAO" p:pdsDAO-ref="PdsDAO">
+	</bean>
+</beans>

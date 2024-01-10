@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+  
+<configuration>
+	<typeAliases>
+		<typeAlias type="java.lang.String" alias="str"></typeAlias>
+		<typeAlias type="java.lang.Integer" alias="int"></typeAlias>
+		<typeAlias type="attetch.spring.dto.AttachVO" alias="attach"></typeAlias>
+		<typeAlias type="attetch.spring.dto.PdsVO" alias="pds"></typeAlias>
+	</typeAliases>
+	<mappers>
+	</mappers>
+</configuration>
